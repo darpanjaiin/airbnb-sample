@@ -46,7 +46,7 @@
         </div>
 
         <section class="featured-sections">
-            <div class="feature-card">
+            <div class="feature-card" id="host-favorites">
                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&auto=format&fit=crop" alt="Host favorites">
                 <div class="card-content">
                     <h2>Host favorites</h2>
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card" id="amenities-card">
                 <img src="https://images.unsplash.com/photo-1445991842772-097fea258e7b?w=400&auto=format&fit=crop" alt="Amenities">
                 <div class="card-content">
                     <h2>Amenities</h2>
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card" id="checkout-card">
                 <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=400&auto=format&fit=crop" alt="Checking out">
                 <div class="card-content">
                     <h2>Checking out</h2>
@@ -357,6 +357,106 @@
                         <li>Digital door locks</li>
                         <li>Power backup</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Checking Out Guide</h2>
+            
+            <div class="modal-sections">
+                <div class="checkout-section">
+                    <h3>🕐 Checkout Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Night Before</h4>
+                            <ul>
+                                <li>Pack your belongings</li>
+                                <li>Collect all valuables</li>
+                                <li>Set alarm for checkout time</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Morning Of</h4>
+                            <ul>
+                                <li>Checkout time: 11:00 AM</li>
+                                <li>Breakfast ends at 10:00 AM</li>
+                                <li>Housekeeping final check at 10:30 AM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3>📋 Checkout Checklist</h3>
+                    <div class="checklist-grid">
+                        <div class="checklist-item">
+                            <h4>Kitchen</h4>
+                            <ul>
+                                <li>Empty refrigerator</li>
+                                <li>Clean used utensils</li>
+                                <li>Dispose of garbage</li>
+                                <li>Turn off all appliances</li>
+                            </ul>
+                        </div>
+                        <div class="checklist-item">
+                            <h4>Rooms</h4>
+                            <ul>
+                                <li>Collect all belongings</li>
+                                <li>Place used towels in bathroom</li>
+                                <li>Turn off AC/heater</li>
+                                <li>Close all windows</li>
+                            </ul>
+                        </div>
+                        <div class="checklist-item">
+                            <h4>Final Steps</h4>
+                            <ul>
+                                <li>Return keys to lockbox</li>
+                                <li>Close and lock all doors</li>
+                                <li>Complete feedback form</li>
+                                <li>Text host after leaving</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3>🚗 Transportation Options</h3>
+                    <div class="transport-options">
+                        <div class="transport-item">
+                            <h4>Airport Transfer</h4>
+                            <p>• Pre-book through reception</p>
+                            <p>• Fixed rate: ₹1200</p>
+                            <p>• Book 4 hours in advance</p>
+                        </div>
+                        <div class="transport-item">
+                            <h4>Local Taxi</h4>
+                            <p>• Ola/Uber available</p>
+                            <p>• Auto stand nearby</p>
+                            <p>• Reception can arrange</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3>💡 Important Notes</h3>
+                    <div class="notes-container">
+                        <div class="note">
+                            <h4>Late Checkout</h4>
+                            <p>• Request 24 hours before</p>
+                            <p>• Subject to availability</p>
+                            <p>• Additional charges may apply</p>
+                        </div>
+                        <div class="note">
+                            <h4>Luggage Storage</h4>
+                            <p>• Available at reception</p>
+                            <p>• Free for same day</p>
+                            <p>• Maximum 8 hours</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
