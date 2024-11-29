@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey's In - Digital Guidebook</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=1200" alt="Joey's Inn Exterior" loading="eager">
+        </div>
+        <header>
+            <h1>Welcome to<br>Joey's In</h1>
+            <p class="tagline">Collect moment, not things</p>
+        </header>
+
+        <div class="quick-access-grid">
+            <div class="grid-item" id="wifi-btn">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200&auto=format&fit=crop" alt="Wifi Password" loading="lazy">
+                <h3>Wifi Password</h3>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=200&auto=format&fit=crop" alt="How-to's">
+                <h3>How-to's</h3>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1488998527040-85054a85150e?w=200&auto=format&fit=crop" alt="Nearby Services">
+                <h3>Near by Services</h3>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=200&auto=format&fit=crop" alt="Emergency Contact">
+                <h3>Emergency Contact</h3>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=200&auto=format&fit=crop" alt="Home Rules">
+                <h3>Home Rules</h3>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&auto=format&fit=crop" alt="Local Specials">
+                <h3>Local Specials</h3>
+            </div>
+        </div>
+
+        <section class="featured-sections">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&auto=format&fit=crop" alt="Host favorites">
+                <div class="card-content">
+                    <h2>Host favorites</h2>
+                    <p>Local recommendations</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1445991842772-097fea258e7b?w=400&auto=format&fit=crop" alt="Amenities">
+                <div class="card-content">
+                    <h2>Amenities</h2>
+                    <p>Find what's inside</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=400&auto=format&fit=crop" alt="Checking out">
+                <div class="card-content">
+                    <h2>Checking out</h2>
+                    <p>Quick and easy checkout tips</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p class="quote">It is good to have an end to journey toward; but it is the journey that matters, in the end</p>
+            <div class="footer-buttons">
+                <button id="feedback-btn">Leave a feedback</button>
+                <button id="share-btn">Share property</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="wifi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>WiFi Details</h2>
+            <p>Network: Joey's Inn Guest</p>
+            <p>Password: Welcome2024!</p>
+        </div>
+    </div>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Feedback</h2>
+            <form id="feedback-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
