@@ -23,23 +23,23 @@
                 <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200&auto=format&fit=crop" alt="Wifi Password" loading="lazy">
                 <h3>Wifi Password</h3>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" id="howto-btn">
                 <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=200&auto=format&fit=crop" alt="How-to's">
                 <h3>How-to's</h3>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" id="nearby-btn">
                 <img src="https://images.unsplash.com/photo-1488998527040-85054a85150e?w=200&auto=format&fit=crop" alt="Nearby Services">
                 <h3>Near by Services</h3>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" id="emergency-btn">
                 <img src="https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=200&auto=format&fit=crop" alt="Emergency Contact">
                 <h3>Emergency Contact</h3>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" id="rules-btn">
                 <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=200&auto=format&fit=crop" alt="Home Rules">
                 <h3>Home Rules</h3>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" id="specials-btn">
                 <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&auto=format&fit=crop" alt="Local Specials">
                 <h3>Local Specials</h3>
             </div>
@@ -90,6 +90,132 @@
         </div>
     </div>
 
+    <div id="howto-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How-to's Guide</h2>
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <h3>TV & Entertainment</h3>
+                    <p>1. Use the Samsung remote to turn on TV</p>
+                    <p>2. Netflix/Prime available - use guest profile</p>
+                    <p>3. Chromecast: Select 'Joey's TV' in device casting</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Kitchen Appliances</h3>
+                    <p>1. Coffee maker: Instructions on machine</p>
+                    <p>2. Dishwasher: Tablets under sink</p>
+                    <p>3. Oven: Press 'Mode' before setting temperature</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Heating & Cooling</h3>
+                    <p>1. Thermostat: Set between 68-78°F</p>
+                    <p>2. Extra blankets in bedroom closet</p>
+                    <p>3. Ceiling fans operated by wall switches</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nearby-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nearby Services</h2>
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <h3>Groceries</h3>
+                    <p>• Whole Foods - 0.3 miles</p>
+                    <p>• Trader Joe's - 0.8 miles</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Pharmacies</h3>
+                    <p>• CVS - 0.2 miles (24/7)</p>
+                    <p>• Walgreens - 0.5 miles</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Public Transport</h3>
+                    <p>• Bus Stop - 2 min walk</p>
+                    <p>• Metro Station - 10 min walk</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="emergency-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Emergency Contacts</h2>
+            <div class="modal-sections">
+                <div class="modal-section emergency">
+                    <h3>Emergency Services</h3>
+                    <p>• Emergency: 911</p>
+                    <p>• Local Police: (555) 123-4567</p>
+                    <p>• Fire Department: (555) 123-8901</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Property Contacts</h3>
+                    <p>• Host (Joey): (555) 234-5678</p>
+                    <p>• Property Manager: (555) 345-6789</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Medical Services</h3>
+                    <p>• Urgent Care: 0.5 miles - (555) 456-7890</p>
+                    <p>• Hospital: 2.1 miles - (555) 567-8901</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>House Rules</h2>
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <h3>General Rules</h3>
+                    <p>• No smoking inside</p>
+                    <p>• Quiet hours: 10 PM - 8 AM</p>
+                    <p>• No parties or events</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Check-out Procedures</h3>
+                    <p>• Check-out time: 11 AM</p>
+                    <p>• Lock all windows and doors</p>
+                    <p>• Place used towels in bathtub</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Parking</h3>
+                    <p>• Use designated spot #12</p>
+                    <p>• Display parking pass</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="specials-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Local Specials</h2>
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <h3>Restaurant Deals</h3>
+                    <p>• 10% off at "The Local Kitchen" - Show key card</p>
+                    <p>• Free dessert at "Cafe Luna" - Mention Joey's Inn</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Activities</h3>
+                    <p>• 20% off Wine Tasting Tours</p>
+                    <p>• Buy 1 Get 1 at Local Theater</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Services</h3>
+                    <p>• Discounted Spa Treatments at "Zen Spa"</p>
+                    <p>• Free Bike Rentals at "City Cycles"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="feedback-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -100,6 +226,139 @@
                 <textarea placeholder="Your Feedback" required></textarea>
                 <button type="submit">Submit Feedback</button>
             </form>
+        </div>
+    </div>
+
+    <div id="host-favorites-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Host Favorites & Local Experiences</h2>
+            
+            <div class="modal-sections">
+                <div class="modal-section highlight-section">
+                    <h3> Must-Try Local Experiences</h3>
+                    <div class="experience-cards">
+                        <div class="exp-card">
+                            <h4>Spice Market Tour</h4>
+                            <p>Experience the colors and aromas of local spice markets</p>
+                            <p class="timing">Best time: Early morning</p>
+                            <p class="price">₹500/person</p>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Traditional Cooking Class</h4>
+                            <p>Learn authentic Indian recipes from local experts</p>
+                            <p class="timing">Duration: 3 hours</p>
+                            <p class="price">₹1500/person</p>
+                        </div>
+                        <div class="exp-card">
+                            <h4>Heritage Walk</h4>
+                            <p>Guided tour of historical monuments and streets</p>
+                            <p class="timing">Evening slots available</p>
+                            <p class="price">₹800/person</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🗝️ Key Information & Contacts</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h4>Transportation</h4>
+                            <ul>
+                                <li>Zoomcar Rental: +91 98765 43210</li>
+                                <li>Royal Bikes: +91 98765 43211</li>
+                                <li>Local Auto Stand: +91 98765 43212</li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <h4>Adventure Sports</h4>
+                            <ul>
+                                <li>Paragliding: Sky Adventures (+91 98765 43213)</li>
+                                <li>River Rafting: Rapids (+91 98765 43214)</li>
+                                <li>Trek Guide: Mountain Trails (+91 98765 43215)</li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <h4>Family Services</h4>
+                            <ul>
+                                <li>Kids Daycare: Little Angels (+91 98765 43216)</li>
+                                <li>Medical Store: 24x7 Pharmacy (+91 98765 43217)</li>
+                                <li>Local Guide: Heritage Tours (+91 98765 43218)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>💡 Host Tips</h3>
+                    <div class="tips-container">
+                        <div class="tip">
+                            <h4>Best Time to Visit Places</h4>
+                            <p>• Temples: Early morning (6-8 AM)</p>
+                            <p>• Markets: After 4 PM</p>
+                            <p>• Restaurants: Before 7:30 PM to avoid rush</p>
+                        </div>
+                        <div class="tip">
+                            <h4>Local Customs</h4>
+                            <p>• Remove shoes before entering temples</p>
+                            <p>• Dress modestly in religious places</p>
+                            <p>• Greet with "Namaste" 🙏</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="amenities-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Property Amenities</h2>
+            
+            <div class="modal-sections amenities-grid">
+                <div class="amenity-category">
+                    <h3>🏊‍♂️ Wellness & Recreation</h3>
+                    <ul>
+                        <li>Temperature-controlled swimming pool (6 AM - 10 PM)</li>
+                        <li>Spa with Ayurvedic treatments</li>
+                        <li>Fully equipped gym</li>
+                        <li>Yoga deck with daily classes</li>
+                        <li>Indoor games room (Carrom, Chess, Table Tennis)</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-category">
+                    <h3>🍽️ Dining & Kitchen</h3>
+                    <ul>
+                        <li>Modern kitchen with induction cooktop</li>
+                        <li>RO water purifier</li>
+                        <li>Microwave & refrigerator</li>
+                        <li>Electric kettle & toaster</li>
+                        <li>Basic spices & cooking oil provided</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-category">
+                    <h3>🛋️ Comfort & Entertainment</h3>
+                    <ul>
+                        <li>Smart TV with Netflix & Prime</li>
+                        <li>High-speed WiFi (100 Mbps)</li>
+                        <li>Air conditioning in all rooms</li>
+                        <li>Washing machine & iron board</li>
+                        <li>Daily housekeeping service</li>
+                    </ul>
+                </div>
+
+                <div class="amenity-category">
+                    <h3>🚗 Parking & Security</h3>
+                    <ul>
+                        <li>Covered parking for 2 vehicles</li>
+                        <li>24/7 security with CCTV</li>
+                        <li>Digital door locks</li>
+                        <li>Power backup</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,24 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Modal functionality
-    const wifiBtn = document.getElementById('wifi-btn');
-    const wifiModal = document.getElementById('wifi-modal');
-    const feedbackBtn = document.getElementById('feedback-btn');
-    const feedbackModal = document.getElementById('feedback-modal');
-    const closeButtons = document.querySelectorAll('.close');
-    
-    wifiBtn.addEventListener('click', () => {
-        wifiModal.style.display = 'block';
-    });
+    // Modal mapping
+    const modalMapping = {
+        'wifi-btn': 'wifi-modal',
+        'howto-btn': 'howto-modal',
+        'nearby-btn': 'nearby-modal',
+        'emergency-btn': 'emergency-modal',
+        'rules-btn': 'rules-modal',
+        'specials-btn': 'specials-modal',
+        'host-favorites': 'host-favorites-modal',
+        'amenities-card': 'amenities-modal',
+        'checkout-card': 'checkout-modal',
+        'feedback-btn': 'feedback-modal'
+    };
 
-    feedbackBtn.addEventListener('click', () => {
-        feedbackModal.style.display = 'block';
-    });
-
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            wifiModal.style.display = 'none';
-            feedbackModal.style.display = 'none';
-        });
+    // Add click handlers for all buttons
+    Object.keys(modalMapping).forEach(btnId => {
+        const btn = document.getElementById(btnId);
+        const modal = document.getElementById(modalMapping[btnId]);
+        if (btn && modal) {
+            btn.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+        }
     });
 
     // Share functionality
@@ -50,11 +53,17 @@ document.addEventListener('DOMContentLoaded', function() {
         feedbackForm.reset();
     });
 
-    // Close modals when clicking outside
+    // Close button functionality for all modals
+    document.querySelectorAll('.close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            closeBtn.closest('.modal').style.display = 'none';
+        });
+    });
+
+    // Close modal when clicking outside
     window.addEventListener('click', (e) => {
-        if (e.target === wifiModal || e.target === feedbackModal) {
-            wifiModal.style.display = 'none';
-            feedbackModal.style.display = 'none';
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
         }
     });
 
