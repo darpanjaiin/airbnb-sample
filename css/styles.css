@@ -189,16 +189,19 @@ h1 {
     height: 100%;
     background: rgba(0,0,0,0.5);
     z-index: 1000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal-content {
     background: white;
-    margin: 15% auto;
+    margin: 15px auto;
     padding: 20px;
     width: 90%;
     max-width: 500px;
     border-radius: 15px;
     position: relative;
+    overflow: visible;
 }
 
 .close {
@@ -219,6 +222,7 @@ h1 {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
 #feedback-form {
@@ -241,13 +245,13 @@ h1 {
 
 footer {
     padding: 12px;
-    margin-top: -4px;
+    margin-top: 40px;
 }
 
 .quote {
     font-style: normal;
     color: #666;
-    margin: 16px 0;
+    margin: 32px 0;
     font-size: 13px;
     line-height: 1.4;
     padding: 0 16px;
@@ -259,6 +263,7 @@ footer {
     gap: 10px;
     justify-content: center;
     padding: 0 12px;
+    margin-top: 32px;
 }
 
 .footer-buttons button {
@@ -315,8 +320,7 @@ footer {
 /* Modal enhancements */
 .modal-large {
     max-width: 800px !important;
-    max-height: 90vh;
-    overflow-y: auto;
+    margin: 15px auto;
 }
 
 .experience-cards {
@@ -756,7 +760,9 @@ p, span, h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced modal sections spacing */
 .modal-sections {
-    gap: 32px;
+    position: relative;
+    overflow: visible;
+    padding-top: 10px;
 }
 
 .modal-section {
@@ -966,5 +972,25 @@ p, span, h1, h2, h3, h4, h5, h6 {
     color: #e67e22;
     font-size: 0.85em;
     margin-top: 2px;
+}
+
+/* Improve scrolling performance */
+.modal-content {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .modal {
+        padding: 0;
+    }
 }
   
