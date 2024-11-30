@@ -230,7 +230,7 @@ footer {
 }
 
 .quote {
-    font-style: italic;
+    font-style: normal;
     color: #666;
     margin: 16px 0;
     font-size: 13px;
@@ -494,9 +494,26 @@ footer {
 
 /* Featured sections - adjust spacing */
 .featured-sections {
-    padding: 12px 16px;  /* increased horizontal padding */
+    padding: 12px 16px;
     display: flex;
     flex-direction: column;
-    gap: 20px;  /* increased gap between cards */
-    margin-top: 8px;  /* add some space from grid above */
-} 
+    gap: 28px;
+    margin-top: 12px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.feature-card img {
+    width: 130px;
+    height: 85px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+  
