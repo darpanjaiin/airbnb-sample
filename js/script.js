@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Add this at the beginning of your existing DOMContentLoaded function
+    if (window.innerWidth > 480) {
+        // Create mobile view notice
+        const notice = document.createElement('div');
+        notice.className = 'mobile-view-notice';
+        notice.innerHTML = '<i class="fas fa-mobile-alt"></i> This is a mobile view. For best experience, use your mobile device.';
+        document.body.appendChild(notice);
+
+        // Remove notice after animation
+        setTimeout(() => {
+            notice.remove();
+        }, 6000);
+    }
+
     // Modal mapping
     const modalMapping = {
         'wifi-btn': 'wifi-modal',
