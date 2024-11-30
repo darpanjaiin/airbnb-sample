@@ -202,11 +202,23 @@ h1 {
 }
 
 .close {
-    position: absolute;
+    position: sticky;
+    top: 0;
     right: 20px;
-    top: 10px;
+    float: right;
     font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #feedback-form {
@@ -315,10 +327,33 @@ footer {
 }
 
 .exp-card {
-    background: #f8f9fa;
+    background: white;
+    border-radius: 16px;
     padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.exp-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+.restaurant-grid, .spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.rest-image, .spot-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
 }
 
 .exp-card h4 {
@@ -369,16 +404,15 @@ footer {
 
 .amenities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
     padding: 20px 0;
 }
 
 .amenity-category {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
 }
 
 .amenity-category h3 {
@@ -672,5 +706,265 @@ p, span, h1, h2, h3, h4, h5, h6 {
     .hero-image img {
         height: 500px;
     }
+}
+
+/* Video container styling */
+.video-container {
+    margin: 15px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Map styling */
+.location-map {
+    margin: 20px 0 30px;
+    position: relative;
+}
+
+.full-width-map {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.legend-item {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Spaced heading for Nearby Services */
+.spaced-heading {
+    letter-spacing: 0.5px;
+}
+
+/* Amenity images */
+.amenity-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+/* Enhanced modal sections spacing */
+.modal-sections {
+    gap: 32px;
+}
+
+.modal-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.modal-section h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Guide images */
+.guide-image {
+    width: 100%;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.instructions {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+/* New sections styling */
+.photo-spots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.transport-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.transport-card {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.benefit-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+/* Enhanced list styling */
+.modal-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-section ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.modal-section ul li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Enhanced service cards */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.service-card {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.service-card h4 {
+    margin-bottom: 12px;
+    color: #000;
+    font-weight: 600;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-card li {
+    margin-bottom: 12px;
+    padding-left: 0 !important;
+    font-size: 14px;
+}
+
+.highlight {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-left: 20px;
+}
+
+/* Kitchen and Climate guides */
+.kitchen-guide, .climate-guide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.guide-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.guide-item p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.temp-settings, .quick-tips {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Video container enhancement */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style for adventure grid */
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.adventure-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.adventure-card h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.adventure-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.adventure-card li {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.contact {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.highlight {
+    display: block;
+    color: #e67e22;
+    font-size: 0.85em;
+    margin-top: 2px;
 }
   
