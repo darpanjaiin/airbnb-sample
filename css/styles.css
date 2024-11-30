@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-style: normal !important;
 }
 
 body {
@@ -515,5 +516,17 @@ footer {
     height: 85px;
     border-radius: 16px;
     object-fit: cover;
+}
+
+/* Ensure modal content is not italic */
+.modal-content p,
+.modal-section p,
+.modal-sections p {
+    font-style: normal;
+}
+
+/* Ensure all paragraphs and text elements are not italic */
+p, span, h1, h2, h3, h4, h5, h6 {
+    font-style: normal;
 }
   
