@@ -94,13 +94,26 @@ h1 {
     transform: scale(0.95);
 }
 
-.grid-item img {
+.grid-item .icon-wrapper {
     width: 55px;
     height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 16px;
     margin-bottom: 6px;
-    object-fit: cover;
-    flex-shrink: 0;
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+
+.grid-item .icon-wrapper i {
+    font-size: 26px;
+    color: #000000;
+}
+
+/* Simple press effect */
+.grid-item:active .icon-wrapper {
+    transform: scale(0.95);
 }
 
 .grid-item h3 {
