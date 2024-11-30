@@ -24,6 +24,9 @@ body {
     margin: 0;
     overflow-x: hidden;
     letter-spacing: -0.2px;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
 }
 
 .hero-image {
@@ -42,6 +45,11 @@ body {
 .container {
     padding: 0;
     max-width: 100%;
+    max-width: 480px;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -191,14 +199,17 @@ h1 {
     z-index: 1000;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
 }
 
 .modal-content {
     background: white;
-    margin: 15px auto;
+    width: 100%;
+    max-width: 480px !important; /* Force mobile width */
+    margin: 0 auto;
     padding: 20px;
-    width: 90%;
-    max-width: 500px;
     border-radius: 15px;
     position: relative;
     overflow: visible;
@@ -319,13 +330,12 @@ footer {
 
 /* Modal enhancements */
 .modal-large {
-    max-width: 800px !important;
-    margin: 15px auto;
+    max-width: 480px !important; /* Force mobile width even for large modals */
 }
 
 .experience-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr !important; /* Force single column */
     gap: 20px;
     margin-top: 15px;
 }
@@ -339,7 +349,7 @@ footer {
 
 .exp-image {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 15px;
@@ -347,14 +357,14 @@ footer {
 
 .restaurant-grid, .spots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr !important; /* Force single column */
     gap: 20px;
     margin-top: 20px;
 }
 
 .rest-image, .spot-image {
     width: 100%;
-    height: 160px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 12px;
@@ -408,7 +418,7 @@ footer {
 
 .amenities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr !important; /* Force single column */
     gap: 24px;
     padding: 20px 0;
 }
@@ -572,143 +582,115 @@ p, span, h1, h2, h3, h4, h5, h6 {
 /* Laptop and larger screens */
 @media screen and (min-width: 1024px) {
     .container {
-        max-width: 960px;
+        max-width: 480px;
         margin: 0 auto;
-        padding: 20px;
-    }
-
-    .hero-image {
-        width: 100%;
-        margin: 0;
-        border-radius: 24px;
-        overflow: hidden;
-    }
-
-    .hero-image img {
-        height: 400px;  /* Taller hero image for desktop */
-    }
-
-    header {
-        padding: 32px 0;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .tagline {
-        font-size: 18px;
-        margin-bottom: 24px;
-    }
-
-    /* Quick access grid for desktop */
-    .quick-access-grid {
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    .grid-item {
         padding: 15px;
     }
 
+    .hero-image {
+        width: 120%;
+        margin-right: -100px;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    header {
+        padding: 16px 16px 8px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .tagline {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    /* Quick access grid for mobile */
+    .quick-access-grid {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .grid-item {
+        padding: 10px 6px;
+    }
+
     .grid-item .icon-wrapper {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
     }
 
     .grid-item .icon-wrapper i {
-        font-size: 30px;
-    }
-
-    .grid-item h3 {
-        font-size: 14px;
-    }
-
-    /* Featured sections for desktop */
-    .featured-sections {
-        padding: 20px 0;
-        gap: 32px;
-    }
-
-    .feature-card {
-        gap: 24px;
-    }
-
-    .feature-card img {
-        width: 180px;
-        height: 120px;
-        border-radius: 20px;
-    }
-
-    .card-content h2 {
         font-size: 26px;
     }
 
-    .card-content p {
-        font-size: 16px;
+    .grid-item h3 {
+        font-size: 13px;
     }
 
-    /* Footer adjustments */
-    footer {
-        padding: 32px 0;
+    /* Featured sections for mobile */
+    .featured-sections {
+        padding: 12px 16px;
+        gap: 28px;
     }
 
-    .quote {
-        font-size: 15px;
-        max-width: 600px;
-        margin: 24px auto;
-    }
-
-    .footer-buttons {
+    .feature-card {
         gap: 16px;
-        max-width: 500px;
-        margin: 0 auto;
     }
 
-    .footer-buttons button {
-        font-size: 15px;
-        padding: 14px 28px;
+    .feature-card img {
+        width: 130px;
+        height: 85px;
+        border-radius: 16px;
     }
 
-    /* Modal adjustments for desktop */
+    .card-content h2 {
+        font-size: 22px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    /* Modal adjustments for mobile */
     .modal-content {
-        margin: 8% auto;
-        padding: 32px;
-        max-width: 600px;
+        margin: 15px auto;
+        padding: 20px;
+        max-width: 90%;
     }
 
     .modal-large {
-        max-width: 1000px !important;
-    }
-
-    .modal-sections {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
+        max-width: 90% !important;
     }
 
     .modal h2 {
-        font-size: 28px;
-        margin-bottom: 24px;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 
     .modal h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .modal p {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
 /* Extra large screens */
 @media screen and (min-width: 1440px) {
     .container {
-        max-width: 1200px;
+        max-width: 480px;
     }
 
     .hero-image img {
-        height: 500px;
+        height: 300px;
     }
 }
 
@@ -852,7 +834,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
 /* Enhanced service cards */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr !important; /* Force single column */
     gap: 20px;
     margin-top: 15px;
 }
@@ -933,7 +915,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
 /* Style for adventure grid */
 .adventure-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr !important; /* Force single column */
     gap: 20px;
     margin-top: 20px;
 }
@@ -993,4 +975,129 @@ p, span, h1, h2, h3, h4, h5, h6 {
         padding: 0;
     }
 }
+
+/* Ensure consistent mobile-like spacing */
+.featured-sections {
+    padding: 12px 16px;
+    gap: 28px;
+    margin-top: 24px;
+}
+
+.quick-access-grid {
+    gap: 10px;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+/* Ensure modal content stays narrow */
+.modal-content {
+    max-width: 90%;
+    margin: 15px auto;
+}
+
+.modal-large {
+    max-width: 90% !important;
+}
+
+/* Center the narrow container on all screens */
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5; /* Optional: adds contrast to show the mobile-width container */
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* Optional: Add a subtle border to emphasize mobile container */
+@media screen and (min-width: 481px) {
+    .container {
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+}
+
+/* Force mobile layout on all screens */
+@media screen and (min-width: 481px) {
+    body {
+        background-color: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 390px !important; /* iPhone 12/13/14 width */
+        max-width: 390px !important;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+        margin: 0;
+    }
+
+    /* Keep modal width consistent with mobile */
+    .modal {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content,
+    .modal-large {
+        width: 390px !important;
+        max-width: 390px !important;
+        margin: auto;
+        border-radius: 20px;
+    }
+
+    /* Force all grids to single column */
+    .experience-cards,
+    .restaurant-grid,
+    .spots-grid,
+    .amenities-grid,
+    .service-grid,
+    .adventure-grid,
+    .photo-spots-grid,
+    .transport-info,
+    .benefits-grid,
+    .kitchen-guide,
+    .climate-guide {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Maintain mobile image sizes */
+    .exp-image,
+    .rest-image,
+    .spot-image,
+    .amenity-image {
+        height: 200px !important;
+    }
+
+    /* Override any desktop-specific padding/margins */
+    .modal-section {
+        padding: 16px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .modal-sections {
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    /* Ensure mobile-like typography */
+    .modal h2 { font-size: 24px !important; }
+    .modal h3 { font-size: 18px !important; }
+    .modal h4 { font-size: 16px !important; }
+    .modal p { font-size: 14px !important; }
+}
+
+/* Remove all other @media queries that might override these styles */
   

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById(modalMapping[btnId]);
         if (btn && modal) {
             btn.addEventListener('click', () => {
-                modal.style.display = 'block';
+                openModal(modalMapping[btnId]);
             });
         }
     });
@@ -49,21 +49,21 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         // Add your form submission logic here
         alert('Thank you for your feedback!');
-        feedbackModal.style.display = 'none';
+        closeModal('feedback-modal');
         feedbackForm.reset();
     });
 
     // Close button functionality for all modals
     document.querySelectorAll('.close').forEach(closeBtn => {
         closeBtn.addEventListener('click', () => {
-            closeBtn.closest('.modal').style.display = 'none';
+            closeModal(closeBtn.closest('.modal').id);
         });
     });
 
     // Close modal when clicking outside
     window.addEventListener('click', (e) => {
         if (e.target.classList.contains('modal')) {
-            e.target.style.display = 'none';
+            closeModal(e.target.id);
         }
     });
 
@@ -76,4 +76,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // When opening a modal
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "flex";
+        modal.classList.add('active');
+    }
+
+    // When closing a modal
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "none";
+        modal.classList.remove('active');
+    }
 }); 
